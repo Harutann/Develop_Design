@@ -5,16 +5,17 @@ class Shingou(Enum):
     BLUE = 2
     YELLOW = 3
 
-    def act_shingou(args):
-        args = sys.argv
-        if args == 1:
-            print("とまれ")
-        elif args == 2:
-            print("すすめ")
-        elif args == 3:
-            print("ちゅうい")
-        else:
-            print("信号機の色に対応していません")
-            
+def act_shingou(args):
+    if int(args[1]) == 1:
+        print("とまれ")
+    elif int(args[2]) == 2:
+        print("すすめ")
+    elif int(args[3]) == 3:
+        print("ちゅうい")
+    else:
+        print("信号機の色に対応していません")
         
-        return Shingou
+    return Shingou
+
+args =  sys.argv
+act_shingou(args)
