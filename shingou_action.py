@@ -1,15 +1,17 @@
+import sys
 from enum import Enum
 class Shingou(Enum):
     RED = 1
     BLUE = 2
     YELLOW = 3
 
-    def act_shingou(color):
-        if color == 1:
+    def act_shingou(args):
+        args = sys.argv
+        if args == 1:
             print("とまれ")
-        elif color == 2:
+        elif args == 2:
             print("すすめ")
-        elif color == 3:
+        elif args == 3:
             print("ちゅうい")
         else:
             print("信号機の色に対応していません")
